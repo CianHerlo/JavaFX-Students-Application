@@ -1,0 +1,40 @@
+#######################################################################################
+				   Start Up Server for Eclipse
+#######################################################################################
+
+Open Command Prompt
+
+startNetworkServer
+
+
+
+#######################################################################################
+	   Connect to Database for Edit in IJ		Port: 1527	Host: localhost
+#######################################################################################
+
+CONNECT 'jdbc:derby:studentsDB;create=true';
+
+
+
+#######################################################################################
+					Students Database SQL
+#######################################################################################
+
+CREATE TABLE student (studentID varchar(9) PRIMARY KEY, studentFN varchar(30), studentMI varchar(1), studentLN varchar(30), studentDOB varchar(10));
+
+INSERT INTO student VALUES ('R00205604', 'Cian', 'D', 'Herlihy', '1995-06-09');
+
+SELECT * FROM student;
+
+
+
+#######################################################################################
+					Modules Database SQL
+#######################################################################################
+
+CREATE TABLE module (studentID varchar(9) PRIMARY KEY, moduleName1 varchar(30), moduleName2 varchar(30), moduleName3 varchar(30), moduleName4 varchar(30), moduleName5 varchar(30), moduleName6 varchar(30), moduleGrade1 int, moduleGrade2 int, moduleGrade3 int, moduleGrade4 int, moduleGrade5 int, moduleGrade6 int);
+
+INSERT INTO module VALUES ('R00205604', 'Module 1', 'Module 2', 'Module 3', 'Module 4', 'Module 5', 'Module 6', 100, 90, 80, 70, 60, 50);
+
+SELECT * FROM module;
+

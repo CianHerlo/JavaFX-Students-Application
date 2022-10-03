@@ -1,0 +1,12 @@
+/*CREATE and INSERT data into students table*/
+CREATE TABLE student (studentID varchar(9), studentFN varchar(30), studentMI varchar(1), studentLN varchar(20), studentDOB DATE);
+INSERT INTO student VALUES ('R00205604', 'Cian', 'D', 'Herlihy', '1995-06-09');
+
+/*CREATE and INSERT data into modules table*/
+CREATE TABLE module (studentID varchar(9), moduleName1 varchar(30), moduleName2 varchar(30), moduleName3 varchar(30), moduleName4 varchar(30), moduleName5 varchar(30), moduleName6 varchar(30), moduleGrade1 int, moduleGrade2 int, moduleGrade3 int, moduleGrade4 int, moduleGrade5 int, moduleGrade6 int);
+INSERT INTO module VALUES ('R00205604', 'Module 1', 'Module 2', 'Module 3', 'Module 4', 'Module 5', 'Module 6', 100, 90, 80, 70, 60, 50);
+
+SELECT * FROM student;
+SELECT * FROM module;
+
+CONNECT 'jdbc:derby:studentsDB;create=true'; 
